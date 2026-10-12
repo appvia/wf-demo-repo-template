@@ -23,7 +23,7 @@ inputs:
 
   - name: region
     description: >-
-      AWS region the stack deploys into. AWS has no default, so a deployment
+      Azure region the stack deploys into. Azure has no default, so a deployment
       without one fails on its first resource.
     type: string
     optional: true

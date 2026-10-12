@@ -17,7 +17,7 @@ metadata:
   name: wf-demo-infra
   # Free-form axes for filtering the catalogue. Classification is spec.category.
   labels:
-    cloud: aws
+    cloud: azure
     delivery: dev-on-merge
 spec:
   url: https://github.com/appvia/wf-demo-repo-template.git
