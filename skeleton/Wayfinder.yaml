@@ -1,0 +1,15 @@
+# The infrastructure this repository deploys. There is no application here:
+# every component is a cloud resource (or a check on one).
+#
+#   $${{ ... }}  A Wayfinder expression — a component's output, or a fact about
+#               the deployment. Resolved in dependency order as the deploy runs.
+#
+# CI deploys this to the `dev` environment on every merge to main, as the
+# instance ${{ .Stack.Name }}-dev. Deploy it yourself with:
+#   wf deploy -f Wayfinder.yaml -i ${{ .Stack.Name }}-dev -w <workspace> -e dev \
+#     --identity <workspace>/dev/aws-dev --region ${{ .Inputs.region }}
+apiVersion: v1
+name: ${{ .Stack.Name }}
+description: "${{ .Inputs.description }}"
+
+components:

@@ -1,0 +1,28 @@
+# Registers this template with Wayfinder.
+#
+# The template sits at the root of this repository, so spec.path is left empty.
+#
+# Set spec.url to wherever this repository is pushed. A public repository is
+# read anonymously, so no GitHub connection is needed to register it or preview
+# what it renders. For a private one, replace `url` with
+# `codeRepoRef: github.com/appvia/wf-demo-repo-template` (registered with
+# Wayfinder and shared with the workspaces that use it).
+#
+#   wf apply -f RepoTemplate-wf-demo-infra.yaml
+#   wf get repotemplate wf-demo-infra -o yaml     # check status.manifest synced
+#
+apiVersion: sourcecontrol/v3
+kind: RepoTemplate
+metadata:
+  name: wf-demo-infra
+  # Free-form axes for filtering the catalogue. Classification is spec.category.
+  labels:
+    cloud: aws
+    delivery: dev-on-merge
+spec:
+  url: https://github.com/appvia/wf-demo-repo-template.git
+  # Tracking a branch means every merge to it changes the template for the next
+  # repository created from it. Pin a tag once it has settled.
+  ref: main
+  displayName: Infrastructure stack (dev on merge)
+  category: infrastructure
