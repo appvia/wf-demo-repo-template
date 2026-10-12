@@ -27,7 +27,7 @@ inputs:
       without one fails on its first resource.
     type: string
     optional: true
-    defaultValue: "eu-west-2"
+    defaultValue: "uksouth"
     pattern: "^[a-z]{2}-[a-z]+-[0-9]$"
 
 # What the scaffolded repository needs in Wayfinder before its pipeline can sign
