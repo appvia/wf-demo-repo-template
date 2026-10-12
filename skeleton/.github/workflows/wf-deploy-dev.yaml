@@ -71,7 +71,7 @@ jobs:
             -i "${instance}" \
             -e "${WAYFINDER_ENVIRONMENT}" \
             -f Wayfinder.yaml \
-            --identity "${WF_IDENTITY:-${workspace}/${WAYFINDER_ENVIRONMENT}/aws-${WAYFINDER_ENVIRONMENT}}" \
+            --identity "${WF_IDENTITY:-${workspace}/azure-identity" \
             --region "${WF_REGION}" \
             --out-file ./deploy.json
 
