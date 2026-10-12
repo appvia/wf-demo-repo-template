@@ -28,7 +28,6 @@ inputs:
     type: string
     optional: true
     defaultValue: "uksouth"
-    pattern: "^[a-z]{2}-[a-z]+-[0-9]$"
 
 # What the scaffolded repository needs in Wayfinder before its pipeline can sign
 # in: one service account, trusted only by a workflow run in THIS repository
